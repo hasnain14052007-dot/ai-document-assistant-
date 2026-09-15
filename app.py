@@ -252,7 +252,7 @@ if st.session_state.chunks:
             client = Groq(api_key=groq_api_key)
             
             response = client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="openai/gpt-oss-20b",
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}
